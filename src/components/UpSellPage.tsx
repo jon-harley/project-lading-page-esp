@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, Clock, FileText, Palette, Gift } from 'lucide-react';
+import CountdownTimer from '../components/CountdownTimer';
 
 const UpsellPage = () => {
   const PAYMENT_URL = 'https://apphive.mycartpanda.com/checkout/171442443:1';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 py-16 px-4">
+        {/* Countdown Timer - Moved to top */}
+      <div className="max-w-4xl mx-auto mb-12">
+        <CountdownTimer />
+      </div>
+
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -85,7 +91,7 @@ const UpsellPage = () => {
           </a>
           
           <Link
-            to="/obrigado"
+            to="/thanks"
             className="block w-full py-4 px-8 bg-gray-600/50 hover:bg-gray-600/70 text-gray-300 text-xl font-semibold rounded-lg transition-all duration-300 text-center"
           >
             ¡No, no acepto esta oferta especial!
