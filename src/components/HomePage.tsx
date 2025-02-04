@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "¿Cuál es el precio de un dibujo?",
-    answer: "Debido a la calidad de mi trabajo, normalmente cobro R$ 61,67. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando R$ 37."
+    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando €19,90."
   },
   {
     question: "¿Por qué debería confiar en ti si soy escéptico(a)?",
