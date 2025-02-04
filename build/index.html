@@ -1,14 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+  
+  <script>
+    window.pixelId = "6760d8fe88102cb741f47b27";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+
+
+    document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key.toLowerCase() === 'u')) {
+        e.preventDefault();
+    }
+    });
+    
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+});
+  </script>
+
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sketch Drawing</title>
+    <style>
+      body {
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+        }
+    </style>
     <script type="module" crossorigin src="./assets/index-Dhzk2oB5.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-nGpq15f0.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
