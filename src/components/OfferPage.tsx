@@ -159,7 +159,7 @@ const OfferPage = () => {
             </div>
             <div className="aspect-square rounded-lg overflow-hidden">
               <img
-                src="https://i.imgur.com/dYF4eP3.jpg"
+                src="https://i.imgur.com/9YwNBtb.png"
                 alt="Exemplo 2"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
               />
@@ -210,7 +210,7 @@ const OfferPage = () => {
                 Dibujo detallado del alma gemela
                 </h3>
                 <img 
-                  src="https://i.imgur.com/G7sBecU.jpg"
+                  src="https://i.imgur.com/xB4xd25.png"
                   alt="Retrato Exemplo"
                   className="w-full aspect-square object-cover rounded-lg mb-4"
                 />
