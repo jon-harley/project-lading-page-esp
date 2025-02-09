@@ -334,7 +334,7 @@ const OfferPage = () => {
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
             <p className="text-purple-200 text-lg italic mb-4">
-              "Recomiendo altamente el servicio de la Psíquica Isa a todos los que están buscando su alma gemela. Su habilidad para capturar la esencia de mi pareja ideal en un dibujo y proporcionar una descripción precisa es realmente notable. Es una herramienta valiosa para quien busca encontrar su alma gemela."
+              "Es mentira... Compré el retrato con Isadora, y ella prometía que yo encontraría a mi alma gemela en hasta 30 días. ¡Qué mentira! En solo DOS SEMANAS, ya encontré al amor de mi vida. Mi único arrepentimiento fue no haberlo hecho antes."
             </p>
             <div className="flex items-center gap-4">
               <img
