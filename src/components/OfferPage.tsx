@@ -347,6 +347,24 @@ const OfferPage = () => {
               </div>
             </div>
           </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+          <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+              <img
+                src="https://i.imgur.com/3FUiOLX.png"
+                alt="Depoimento 1"
+                className="w-full h-auto rounded-lg mb-4"
+              />
+            </div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+          <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+              <img
+                src="https://i.imgur.com/Ib8Xf4s.png"
+                alt="Depoimento 1"
+                className="w-full h-auto rounded-lg mb-4"
+              />
+            </div>
+          </div>
         </section>
 
        {/* Detailed Description Section */}
