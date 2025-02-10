@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import Quiz from './components/Quiz';
 import HomePage from './components/HomePage';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsConditions from './components/TermsConditions';
@@ -13,7 +14,8 @@ function App() {
   <FormProvider>
     <LoadingBar />
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<Quiz />} />
+      <Route path="/homePage" element={<HomePage />} />
       <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsConditions />} />
       <Route path="/offerPage" element={<OfferPage />} />

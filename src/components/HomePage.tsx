@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Heart, Clock, Shield, ChevronDown, Sparkles, PenTool } from 'lucide-react';
-import Quiz from '../components/Quiz';
-import Modal from '../components/Modal';
 
 const faqs = [
   {
@@ -11,7 +9,7 @@ const faqs = [
   },
   {
     question: "¿Cuál es el precio de un dibujo?",
-    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando €19,90."
+    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando €9,90."
   },
   {
     question: "¿Por qué debería confiar en ti si soy escéptico(a)?",
@@ -64,11 +62,8 @@ const faqs = [
 ];
 
 function HomePage() {
-  const [isQuizOpen, setIsQuizOpen] = useState(false);
+  const navigate = useNavigate();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-
-  const openQuiz = () => setIsQuizOpen(true);
-  const closeQuiz = () => setIsQuizOpen(false);
 
   const handleFaqClick = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -88,7 +83,7 @@ function HomePage() {
           A través de una lectura intuitiva, revelamos la apariencia de tu conexión predestinada
           </p>
           <button 
-            onClick={openQuiz}
+            onClick={() => navigate('/offerPage')}
             className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-full text-lg font-semibold hover:from-purple-600 hover:to-pink-600 transform hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/25"
           >
             Solicitar Mi Dibujo Ahora
@@ -205,20 +200,7 @@ function HomePage() {
                 className="w-full h-auto rounded-lg mb-4"
               />
             </div>
-            <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
-              <img
-                src="https://i.imgur.com/pgVFxCx.png"
-                alt="Depoimento 1"
-                className="w-full h-auto rounded-lg mb-4"
-              />
-            </div>
-            <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
-              <img
-                src="https://i.imgur.com/Vfgiw6E.png"
-                alt="Depoimento 1"
-                className="w-full h-auto rounded-lg mb-4"
-              />
-            </div>
+            
           </div>
         </div>
       </section>
@@ -264,7 +246,7 @@ function HomePage() {
           Si no quedas completamente satisfecho con tu revelación, te devolvemos tu inversión íntegramente en hasta 7 días.
           </p>
           <button 
-            onClick={openQuiz}
+            onClick={() => navigate('/offerPage')}
             className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-full text-lg font-semibold hover:from-purple-600 hover:to-pink-600 transform hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/25"
           >
             Revelar Mi Alma Gemela
@@ -315,10 +297,6 @@ function HomePage() {
         </div>
       </footer>
 
-      {/* Quiz Modal */}
-      <Modal isOpen={isQuizOpen} onClose={closeQuiz}>
-        <Quiz onClose={closeQuiz} />
-      </Modal>
     </div>
   );
 }

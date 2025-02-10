@@ -9,6 +9,7 @@ interface FormData {
   ethnicity: string;
   birthDate: string;
   zodiacSign: string;
+  quizAnswers?: Record<number, string>;
 }
 
 interface FormContextType {
@@ -27,7 +28,8 @@ export const FormProvider: React.FC<{ children: React.ReactNode }> = ({ children
     relationshipStatus: '',
     ethnicity: '',
     birthDate: '',
-    zodiacSign: ''
+    zodiacSign: '',
+    quizAnswers: {}
   });
 
   return (

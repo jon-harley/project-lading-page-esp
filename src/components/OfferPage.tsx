@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: "¿Cuál es el precio de un dibujo?",
-    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando €19,90."
+    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando €9,90."
   },
   {
     question: "¿Por qué debería confiar en ti si soy escéptico(a)?",
@@ -68,7 +68,7 @@ const OfferPage = () => {
         setOpenFaqIndex(openFaqIndex === index ? null : index);
       };
     const { formData } = useForm();
-    const firstName = formData.fullName.split(' ')[0];
+    const firstName = formData.fullName?.split(' ')[0] || 'Querida';
     const PAYMENT_URL = 'https://apphive.mycartpanda.com/checkout/171437752:1';
 
   return (
@@ -266,7 +266,7 @@ const OfferPage = () => {
               <p className="text-2xl text-purple-200 mb-2">Paquete de Dibujo del Alma Gemela</p>
               <div className="flex items-center justify-center gap-4">
                 <span className="text-gray-400 line-through text-2xl">€59,90</span>
-                <span className="text-4xl font-bold text-white">€19,90</span>
+                <span className="text-4xl font-bold text-white">€9,90</span>
               </div>
             </div>
             <a
@@ -334,7 +334,7 @@ const OfferPage = () => {
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
             <p className="text-purple-200 text-lg italic mb-4">
-              "Es mentira... Compré el retrato con Isadora, y ella prometía que yo encontraría a mi alma gemela en hasta 30 días. ¡Qué mentira! En solo DOS SEMANAS, ya encontré al amor de mi vida. Mi único arrepentimiento fue no haberlo hecho antes."
+              "Compré el retrato con Isadora, y ella prometía que yo encontraría a mi alma gemela en hasta 30 días. ¡Qué mentira! En solo DOS SEMANAS, ya encontré al amor de mi vida. Mi único arrepentimiento fue no haberlo hecho antes."
             </p>
             <div className="flex items-center gap-4">
               <img
@@ -345,24 +345,6 @@ const OfferPage = () => {
               <div>
                 <h4 className="font-semibold text-white">Elena García</h4>
               </div>
-            </div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-          <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
-              <img
-                src="https://i.imgur.com/3FUiOLX.png"
-                alt="Depoimento 1"
-                className="w-full h-auto rounded-lg mb-4"
-              />
-            </div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-          <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
-              <img
-                src="https://i.imgur.com/Ib8Xf4s.png"
-                alt="Depoimento 1"
-                className="w-full h-auto rounded-lg mb-4"
-              />
             </div>
           </div>
         </section>
