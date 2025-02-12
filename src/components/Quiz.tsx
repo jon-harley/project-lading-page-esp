@@ -197,7 +197,7 @@ const Quiz: React.FC = () => {
             birthDate,
             quizAnswers: answers
           }));
-          navigate('/homePage');
+          navigate('/offerPage');
         }
       }, 300); // Small delay for visual feedback
     }
@@ -252,7 +252,7 @@ const Quiz: React.FC = () => {
         birthDate,
         quizAnswers: answers
       }));
-      navigate('/homePage');
+      navigate('/offerPage');
     }
   };
 

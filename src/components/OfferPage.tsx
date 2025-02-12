@@ -175,6 +175,29 @@ const OfferPage = () => {
         </div>
       </section>
 
+      {/* Features Section */}
+            <section className="py-16 px-4 bg-white/5 mb-16">
+              <div className="max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="text-center p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+                    <PenTool className="w-8 h-8 mx-auto mb-4 text-purple-300" />
+                    <h3 className="text-xl font-semibold mb-2">Retrato Energético</h3>
+                    <p className="text-purple-200">Dibujo único basado en tu energía personal y conexión espiritual</p>
+                  </div>
+                  <div className="text-center p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+                    <Clock className="w-8 h-8 mx-auto mb-4 text-purple-300" />
+                    <h3 className="text-xl font-semibold mb-2">Entrega Rápida</h3>
+                    <p className="text-purple-200">Tu retrato y análisis en hasta 24 horas después de la solicitud</p>
+                  </div>
+                  <div className="text-center p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+                    <Heart className="w-8 h-8 mx-auto mb-4 text-purple-300" />
+                    <h3 className="text-xl font-semibold mb-2">Conexión Profunda</h3>
+                    <p className="text-purple-200">Descubre detalles únicos sobre tu conexión predestinada</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
       {/* Personalized Button */}
       <div className="text-center">
           <a
@@ -256,7 +279,45 @@ const OfferPage = () => {
               </div>
             </div>
           </div>
-        </section>  
+        </section>
+
+       {/* Testimonials */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-serif text-center mb-12">Historias de Conexiones</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+              <img
+                src="https://i.imgur.com/NMewwQ6.png"
+                alt="Depoimento 1"
+                className="w-full h-auto rounded-lg mb-4"
+              />
+            </div>
+            <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+              <img
+                src="https://i.imgur.com/3B5oDLj.png"
+                alt="Depoimento 2"
+                className="w-full h-auto rounded-lg mb-4"
+              />
+            </div>
+            <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+              <img
+                src="https://i.imgur.com/6UZAlvz.png"
+                alt="Depoimento 3"
+                className="w-full h-auto rounded-lg mb-4"
+              />
+            </div>
+            <div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all">
+              <img
+                src="https://i.imgur.com/ed0QMIm.png"
+                alt="Depoimento 4"
+                className="w-full h-auto rounded-lg mb-4"
+              />
+            </div>
+            
+          </div>
+        </div>
+      </section> 
 
         {/* Special Offer */}
         <section className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 text-center">
@@ -390,6 +451,29 @@ const OfferPage = () => {
             </div>
           </div>
         </section>  
+
+       {/* About Isadora Section */}
+      <section className="py-16 px-4 bg-white/5 mb-16">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+          <img 
+            src="https://i.imgur.com/v9fXwBq.png" 
+            alt="Isadora" 
+            className="w-64 h-64 object-cover rounded-lg shadow-xl"
+          />
+          <div className="space-y-4">
+            <h2 className="text-3xl font-serif mb-6">Sobre Isadora Lys</h2>
+            <p className="text-purple-200">
+              Soy Isadora, una psíquica con más de 12 años de experiencia especializada en lectura de mapa astral, lecturas intuitivas y conexiones espirituales. Desde joven, descubrí mi don de ver más allá del plano físico y captar la esencia de las almas destinadas a encontrarse.
+            </p>
+            <p className="text-purple-200">
+              Mi misión de reunir almas gemelas comenzó hace más de 15 años, cuando tuve una visión impactante sobre conexiones predestinadas. Desde entonces, he estado ayudando a miles de personas a reconocer y encontrar sus verdaderos amores, guiándolos con precisión y sensibilidad.
+            </p>
+            <p className="text-purple-200">
+              Con mi habilidad única, ya he logrado unir innumerables almas gemelas, con un índice de acierto sorprendente. ¡Ahora, quiero ayudarte!
+            </p>
+          </div>
+        </div>
+      </section>
 
         {/* FAQ Section */}
       <section className="py-16 px-4">

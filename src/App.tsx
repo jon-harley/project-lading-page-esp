@@ -15,7 +15,7 @@ function App() {
     <LoadingBar />
     <Routes>
       <Route path="/" element={<Quiz />} />
-      <Route path="/homePage" element={<HomePage />} />
+     {/* <Route path="/homePage" element={<HomePage />} /> // using single page*/} 
       <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsConditions />} />
       <Route path="/offerPage" element={<OfferPage />} />
