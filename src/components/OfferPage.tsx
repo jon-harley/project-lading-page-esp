@@ -69,7 +69,7 @@ const OfferPage = () => {
       };
     const { formData } = useForm();
     const firstName = formData.fullName?.split(' ')[0] || 'Querida';
-    const PAYMENT_URL = 'https://pay.hotmart.com/M98060773D?checkoutMode=10';
+    const PAYMENT_URL = 'https://apphive.mycartpanda.com/checkout/171437752:1';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 py-16 px-4">
