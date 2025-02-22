@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, MapPin, ThumbsUp, Heart, PenTool, Shield, Clock, Sparkles, CheckCircle, ArrowRight, AlertTriangle, FileText } from 'lucide-react';
+import { ChevronDown, MapPin, ThumbsUp, Heart, PenTool, Shield, Clock, Sparkles, ArrowRight, AlertTriangle, FileText, Users, Star, Gift, Zap } from 'lucide-react';
 import { useForm } from '../components/FormContext';
 
 const faqs = [
@@ -91,41 +91,78 @@ const OfferPage = () => {
         </div>
       </div>
 
+
+      {/* Social Proof */}
+      <div className="max-w-4xl mx-auto mb-16">
+        <div className="flex items-center justify-center gap-8 text-center">
+          <div>
+            <Users className="w-8 h-8 mx-auto mb-2 text-purple-300" />
+            <p className="text-2xl font-bold text-white">10,000+</p>
+            <p className="text-purple-200">Clientes Satisfechos</p>
+          </div>
+          <div>
+            <Star className="w-8 h-8 mx-auto mb-2 text-purple-300" />
+            <p className="text-2xl font-bold text-white">4.9/5</p>
+            <p className="text-purple-200">Calificación Promedio</p>
+          </div>
+          <div>
+            <Heart className="w-8 h-8 mx-auto mb-2 text-purple-300" />
+            <p className="text-2xl font-bold text-white">95%</p>
+            <p className="text-purple-200">Tasa de Precisión</p>
+          </div>
+        </div>
+      </div>
+
       {/* Main Content */}
       <div className="max-w-6xl mx-auto space-y-16">
-        {/* Benefits Section */}
+        {/* What You'll Get Section */}
         <section className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-          <h2 className="text-3xl font-serif text-center text-white mb-12">Lo que recibirás:</h2>
+          <h2 className="text-3xl font-serif text-center text-white mb-12">
+            Lo que obtendrás hoy:
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 flex-shrink-0 text-purple-400" />
+                <PenTool className="w-6 h-6 flex-shrink-0 text-purple-400" />
                 <div>
                   <h3 className="font-semibold text-white mb-2">Dibujo detallado y personalizado</h3>
-                  <p className="text-purple-200">Recibirás un dibujo increíblemente detallado que no solo captura la apariencia física de tu alma gemela, sino también su aura única, revelando su esencia y energía más profundas.</p>
+                  <p className="text-purple-200">Un retrato increíblemente detallado que captura no solo la apariencia física de tu alma gemela, sino también su aura única y esencia espiritual.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 flex-shrink-0 text-purple-400" />
+                <Zap className="w-6 h-6 flex-shrink-0 text-purple-400" />
                 <div>
-                  <h3 className="font-semibold text-white mb-2">Versión impresa en alta calidad</h3>
-                  <p className="text-purple-200">Imprime tu boceto de alta calidad y mantenlo cerca para aprovechar el poder de la visualización. Al concentrarte regularmente en esta imagen, estarás manifestando activamente tu combinación perfecta en tu vida.</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 flex-shrink-0 text-purple-400" />
-                <div>
-                  <h3 className="font-semibold text-white mb-2">Archivo digital en alta resolución</h3>
-                  <p className="text-purple-200">Cada ilustración se crea en alta resolución y se entrega en formato digital, garantizando que la imagen de tu alma gemela esté siempre contigo, accesible en cualquier dispositivo, siempre que necesites un recordatorio del amor que te espera.</p>
+                  <h3 className="font-semibold text-white mb-2">Lectura energética profunda</h3>
+                  <p className="text-purple-200">Descubre las características únicas, personalidad y conexión espiritual de tu alma gemela a través de una lectura intuitiva detallada.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Clock className="w-6 h-6 flex-shrink-0 text-purple-400" />
                 <div>
-                  <h3 className="font-semibold text-white mb-2">Entrega express en hasta 24 horas</h3>
-                  <p className="text-purple-200">Recibe tu boceto en hasta 24 horas. Cada momento cuenta cuando se trata de unirse a tu alma gemela, y estoy comprometido en ayudarte a comenzar esta aventura transformadora lo más rápido posible.</p>
+                  <h3 className="font-semibold text-white mb-2">Entrega express en 24 horas</h3>
+                  <p className="text-purple-200">Recibe tu retrato y lectura en tiempo récord. ¡Cada momento cuenta cuando se trata del amor verdadero!</p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <FileText className="w-6 h-6 flex-shrink-0 text-purple-400" />
+                <div>
+                  <h3 className="font-semibold text-white mb-2">Guía de manifestación del amor</h3>
+                  <p className="text-purple-200">Recibe una guía exclusiva con técnicas y rituales para atraer a tu alma gemela más rápidamente a tu vida.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Gift className="w-6 h-6 flex-shrink-0 text-purple-400" />
+                <div>
+                  <h3 className="font-semibold text-white mb-2">Bonos exclusivos</h3>
+                  <p className="text-purple-200">
+                    <span className="text-pink-300">BONO 1:</span> Ritual de conexión espiritual
+                    <br />
+                    <span className="text-pink-300">BONO 2:</span> Meditación guiada para atraer el amor
+                    <br />
+                    <span className="text-pink-300">BONO 3:</span> Calendario astrológico para el amor
+                  </p>
                 </div>
               </div>
             </div>
