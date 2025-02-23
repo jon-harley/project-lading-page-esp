@@ -4,7 +4,7 @@ import { Sparkles, Clock, FileText, Palette, Gift } from 'lucide-react';
 import CountdownTimer from '../components/CountdownTimer';
 
 const UpsellPage = () => {
-  const PAYMENT_URL = 'https://pay.hotmart.com/E98068564N?checkoutMode=10';
+  const PAYMENT_URL = 'https://apphive.mycartpanda.com/checkout/171442443:1';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 py-16 px-4">
@@ -75,7 +75,7 @@ const UpsellPage = () => {
         <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 text-center mb-12">
           <h2 className="text-2xl font-semibold text-white mb-4">💡 Oferta Limitada</h2>
           <p className="text-xl text-purple-200 mb-6">
-            Estos bonos suman €98, pero los recibes por solo €6,89 al elegir el Paquete Completo ahora.
+            Estos bonos suman €98, pero los recibes por solo €9,85 al elegir el Paquete Completo ahora.
           </p>
         </div>
 
