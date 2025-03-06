@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, MapPin, ThumbsUp, Heart, PenTool, Shield, Clock, Sparkles, ArrowRight, AlertTriangle, FileText, Users, Star, Gift, Zap } from 'lucide-react';
+import { Palette, ChevronDown, MapPin, ThumbsUp, Heart, PenTool, Shield, Clock, Sparkles, ArrowRight, AlertTriangle, FileText, Users, Star, Gift, Zap } from 'lucide-react';
 import { useForm } from '../components/FormContext';
 
 const faqs = [
@@ -69,7 +69,7 @@ const OfferPage = () => {
       };
     const { formData } = useForm();
     const firstName = formData.fullName?.split(' ')[0] || 'Querida';
-    const PAYMENT_URL = 'https://apphive.mycartpanda.com/checkout/171437752:1';
+    const PAYMENT_URL = 'https://pay.hotmart.com/M98060773D?checkoutMode=10';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 py-16 px-4">
@@ -489,28 +489,88 @@ const OfferPage = () => {
           </div>
         </section>  
 
-       {/* About Isadora Section */}
-      <section className="py-16 px-4 bg-white/5 mb-16">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
-          <img 
-            src="https://i.imgur.com/v9fXwBq.png" 
-            alt="Isadora" 
-            className="w-64 h-64 object-cover rounded-lg shadow-xl"
-          />
-          <div className="space-y-4">
-            <h2 className="text-3xl font-serif mb-6">Sobre Isadora Lys</h2>
-            <p className="text-purple-200">
-              Soy Isadora, una psíquica con más de 12 años de experiencia especializada en lectura de mapa astral, lecturas intuitivas y conexiones espirituales. Desde joven, descubrí mi don de ver más allá del plano físico y captar la esencia de las almas destinadas a encontrarse.
-            </p>
-            <p className="text-purple-200">
-              Mi misión de reunir almas gemelas comenzó hace más de 15 años, cuando tuve una visión impactante sobre conexiones predestinadas. Desde entonces, he estado ayudando a miles de personas a reconocer y encontrar sus verdaderos amores, guiándolos con precisión y sensibilidad.
-            </p>
-            <p className="text-purple-200">
-              Con mi habilidad única, ya he logrado unir innumerables almas gemelas, con un índice de acierto sorprendente. ¡Ahora, quiero ayudarte!
-            </p>
+      <div className="text-center mb-12">
+                <Sparkles className="w-16 h-16 mx-auto mb-6 text-yellow-400 animate-pulse" />
+                <h1 className="text-4xl md:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300 mb-4">
+                ¡No te lo pierdas! ¡Sólo hoy!
+                ¡Al comprar ahora recibirás acceso exclusivo! 🎉
+                </h1>
+                <p className="text-xl text-purple-200">
+                ¡Una actualización VIP con increíbles beneficios!
+                </p>
+              </div>
+        
+        {/* Benefits */}
+        <div className="space-y-8 mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-start gap-4">
+            <div className="bg-purple-500/20 p-3 rounded-lg">
+              <Clock className="w-6 h-6 text-purple-300" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">1️⃣ Entrega Prioritária Expressa</h3>
+              <p className="text-purple-200">Recibe tu retrato en hasta 5 minutos, ahorrando tiempo precioso</p>
+              <p className="text-purple-300 mt-2">(Valor original: €9.90)</p>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-start gap-4">
+            <div className="bg-purple-500/20 p-3 rounded-lg">
+              <FileText className="w-6 h-6 text-purple-300" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">2️⃣ Descripción Detallada del Alma Gemela</h3>
+              <p className="text-purple-200">Incluye cuándo y dónde se encontrarán, las iniciales de su nombre, su profesión, personalidad, signo zodiacal y mucho más.</p>
+              <p className="text-purple-300 mt-2">(Valor original: €29.90)</p>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-start gap-4">
+            <div className="bg-purple-500/20 p-3 rounded-lg">
+              <Palette className="w-6 h-6 text-purple-300" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">3️⃣ Dibujo a Color Actualizado</h3>
+              <p className="text-purple-200">Retrato en colores vivos y detallados, capturando cada trazo con perfección</p>
+              <p className="text-purple-300 mt-2">(Valor original: €19.90)</p>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-start gap-4">
+            <div className="bg-purple-500/20 p-3 rounded-lg">
+              <Gift className="w-6 h-6 text-purple-300" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">4️⃣ Bono Exclusivo</h3>
+              <p className="text-purple-200">Este bono guarda un detalle esencial, pensado especialmente para ti que buscas entender y atraer tu alma gemela. Una revelación que puede hacer toda la diferencia en tu camino.</p>
+            </div>
           </div>
         </div>
-      </section>
+
+        {/* Offer Box */}
+        <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 text-center mb-12">
+          <h2 className="text-2xl font-semibold text-white mb-4">💡 Oferta Limitada</h2>
+          <p className="text-xl text-purple-200 mb-6">
+            Estos bonos suman €98, pero los recibes por solo €19,90 al elegir el Paquete Completo ahora.
+          </p>
+        </div>
+            
+      {/* Action Buttons */}
+              <div className="space-y-4">
+                <a
+                  href={PAYMENT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-4 px-8 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xl font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 text-center transform hover:scale-[1.02] shadow-lg"
+                >
+                  ¡Sí! ¡Quiero saber todo sobre mi alma gemela ahora!
+                </a>
+              </div>
+         {/* Timer */}
+        <div className="text-center mt-8">
+          <p className="text-purple-300">
+            🕒 Oferta disponible solo para esta sesión. No pierdas esta oportunidad exclusiva.
+          </p>
+        </div>             
 
         {/* FAQ Section */}
       <section className="py-16 px-4">

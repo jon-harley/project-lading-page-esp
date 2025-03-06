@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, BellRing as Ring, Heart, Calendar } from 'lucide-react';
 import { useForm } from '../components/FormContext';
@@ -48,12 +48,12 @@ const tarotCards = Array(8).fill(null).map((_, index) => ({
 }));
 
 const testimonials = [
-  { id: "1", label: "Depoimento 1", image: "https://i.imgur.com/pgVFxCx.png" },
-  { id: "2", label: "Depoimento 2", image: "https://i.imgur.com/3FUiOLX.png" },
-  { id: "3", label: "Depoimento 3", image: "https://i.imgur.com/Ib8Xf4s.png" },
-  { id: "4", label: "Depoimento 4", image: "https://i.imgur.com/Vfgiw6E.png" },
-  { id: "4", label: "Depoimento 5", image: "https://i.imgur.com/NBED6aI.png" },
-  { id: "4", label: "Depoimento 5", image: "https://i.imgur.com/WmXqTlV.jpg" }
+  { id: "4", label: "Depoimento 4", type: "video", url: "https://i.imgur.com/kqC6iRz.mp4" },
+  { id: "1", label: "Depoimento 1", type: "image", url: "https://i.imgur.com/pgVFxCx.png" },
+  { id: "2", label: "Depoimento 2", type: "image", url: "https://i.imgur.com/3FUiOLX.png" },
+  { id: "3", label: "Depoimento 3", type: "image", url: "https://i.imgur.com/Ib8Xf4s.png" },
+  { id: "5", label: "Depoimento 5", type: "image", url: "https://i.imgur.com/NBED6aI.png" },
+  { id: "6", label: "Depoimento 6", type: "image", url: "https://i.imgur.com/WmXqTlV.jpg" }
 ];
 
 const questions: Question[] = [
@@ -177,29 +177,58 @@ const Quiz: React.FC = () => {
   const [birthDate, setBirthDate] = useState('');
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedCards, setSelectedCards] = useState<string[]>([]);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisProgress, setAnalysisProgress] = useState(0);
 
   const progress = ((currentQuestion + 1) / questions.length) * 100;
+
+  const simulateAnalysis = () => {
+    setIsAnalyzing(true);
+    setAnalysisProgress(0);
+    
+    const duration = 3000;
+    const steps = 100;
+    const increment = 100 / steps;
+    const stepDuration = duration / steps;
+
+    let currentProgress = 0;
+    
+    const interval = setInterval(() => {
+      currentProgress += increment;
+      
+      if (currentProgress >= 100) {
+        clearInterval(interval);
+        setIsAnalyzing(false);
+        navigate('/offerPage');
+      } else {
+        setAnalysisProgress(currentProgress);
+      }
+    }, stepDuration);
+  };
+
+  const handleFinishQuiz = () => {
+    setFormData(prev => ({
+      ...prev,
+      fullName: firstName.trim(),
+      birthDate,
+      quizAnswers: answers
+    }));
+    simulateAnalysis();
+  };
 
   const handleOptionSelect = (optionId: string) => {
     setSelectedOption(optionId);
     setAnswers(prev => ({ ...prev, [questions[currentQuestion].id]: optionId }));
     
-    // Auto-advance for button-type questions
     if (question.type === 'button' || question.type === 'relationship' || question.type === 'zodiac') {
       setTimeout(() => {
         if (currentQuestion < questions.length - 1) {
           setCurrentQuestion(prev => prev + 1);
           setSelectedOption(answers[questions[currentQuestion + 1]?.id] || null);
         } else {
-          setFormData(prev => ({
-            ...prev,
-            firstName,
-            birthDate,
-            quizAnswers: answers
-          }));
-          navigate('/offerPage');
+          handleFinishQuiz();
         }
-      }, 300); // Small delay for visual feedback
+      }, 300);
     }
   };
 
@@ -227,7 +256,6 @@ const Quiz: React.FC = () => {
     
     setSelectedCards(newSelectedCards);
     
-    // Auto-advance when 3 cards are selected
     if (newSelectedCards.length === 3) {
       setTimeout(() => handleNext(), 500);
     }
@@ -235,7 +263,6 @@ const Quiz: React.FC = () => {
 
   const handleNext = () => {
     if (currentQuestion < questions.length - 1) {
-      // If it's the name question, save it to form context
       if (question.type === 'text') {
         setFormData(prev => ({
           ...prev,
@@ -246,13 +273,7 @@ const Quiz: React.FC = () => {
       setSelectedOption(answers[questions[currentQuestion + 1]?.id] || null);
       setSelectedCards([]);
     } else {
-      setFormData(prev => ({
-        ...prev,
-        fullName: firstName.trim(),
-        birthDate,
-        quizAnswers: answers
-      }));
-      navigate('/offerPage');
+      handleFinishQuiz();
     }
   };
 
@@ -279,6 +300,59 @@ const Quiz: React.FC = () => {
         return selectedOption !== null;
     }
   };
+
+  const renderTestimonial = (testimonial: any) => {
+    if (testimonial.type === 'video') {
+      return (
+        <video
+          src={testimonial.url}
+          controls
+          className="w-full rounded-xl"
+          style={{ maxHeight: '70vh' }}
+        />
+      );
+    }
+    return (
+      <img
+        src={testimonial.url}
+        alt={testimonial.label}
+        className="w-full object-contain rounded-xl"
+        style={{ maxHeight: '70vh' }}
+      />
+    );
+  };
+
+  if (isAnalyzing) {
+    return (
+      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-4">
+        <div className="max-w-md w-full space-y-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4">Analisando seus dados...</h2>
+            <div className="relative pt-1">
+              <div className="flex mb-2 items-center justify-between">
+                <div>
+                  <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-200">
+                    Taxa de carregamento
+                  </span>
+                </div>
+                <div className="text-right">
+                  <span className="text-xs font-semibold inline-block text-purple-200">
+                    {Math.round(analysisProgress)}%
+                  </span>
+                </div>
+              </div>
+              <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-purple-200/20">
+                <div
+                  style={{ width: `${analysisProgress}%` }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const renderQuestion = () => {
     switch (question.type) {
@@ -354,19 +428,15 @@ const Quiz: React.FC = () => {
           </div>
         );
 
-        case 'tarot':
+      case 'tarot':
         return (
           <div className="space-y-12">
-            {/* Title with purple glow effect */}
             <div className="text-center space-y-4">
-
-              {/* Step text */}
               <h3 className="text-2xl font-semibold text-cyan-300 mt-8">
-              Elige 3 cartas
+                Elige 3 cartas
               </h3>
             </div>
 
-            {/* Cards grid */}
             <div className="grid grid-cols-4 gap-4 max-w-2xl mx-auto">
               {question.options?.map((card) => (
                 <div key={card.id} className="flex flex-col items-center">
@@ -420,30 +490,25 @@ const Quiz: React.FC = () => {
           </div>
         );
 
-        case 'testimonials':
-          return (
-            <div className="max-w-2xl mx-auto">
-              <div className="relative rounded-xl overflow-hidden">
-                <img
-                  src={question.options?.[currentTestimonial].image}
-                  alt={question.options?.[currentTestimonial].label}
-                  className="w-full object-contain"
-                  style={{ maxHeight: '70vh' }}
-                />
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 p-4">
-                  {question.options?.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentTestimonial(index)}
-                      className={`w-3 h-3 rounded-full transition-all ${
-                        currentTestimonial === index ? 'bg-purple-500' : 'bg-white/50'
-                      }`}
-                    />
-                  ))}
-                </div>
+      case 'testimonials':
+        return (
+          <div className="max-w-2xl mx-auto">
+            <div className="relative rounded-xl overflow-hidden">
+              {renderTestimonial(question.options?.[currentTestimonial])}
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 p-4">
+                {question.options?.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      currentTestimonial === index ? 'bg-purple-500' : 'bg-white/50'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
-          );
+          </div>
+        );
 
       default:
         return (
@@ -470,7 +535,6 @@ const Quiz: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Back Button */}
       <div className="fixed top-4 left-4">
         {currentQuestion > 0 && (
           <button
@@ -483,7 +547,6 @@ const Quiz: React.FC = () => {
         )}
       </div>
 
-      {/* Progress Bar */}
       <div className="fixed top-0 left-0 right-0">
         <div className="h-2 bg-gray-800">
           <div
@@ -493,10 +556,8 @@ const Quiz: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="min-h-screen flex flex-col items-center justify-center px-4 pt-16">
         <div className="w-full max-w-3xl">
-          {/* Question */}
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               {question.title}
@@ -506,10 +567,8 @@ const Quiz: React.FC = () => {
             )}
           </div>
 
-          {/* Question Content */}
           {renderQuestion()}
 
-          {/* Navigation - Only show for text input, testimonials, and special cases */}
           {(question.type === 'text' || question.type === 'testimonials') && (
             <div className="flex justify-center mt-12">
               <button
