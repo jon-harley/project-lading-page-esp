@@ -327,12 +327,12 @@ const Quiz: React.FC = () => {
       <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-4">
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4">Analisando seus dados...</h2>
+            <h2 className="text-3xl font-bold mb-4">Analizando sus datos...</h2>
             <div className="relative pt-1">
               <div className="flex mb-2 items-center justify-between">
                 <div>
                   <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-200">
-                    Taxa de carregamento
+                  Tasa de carga
                   </span>
                 </div>
                 <div className="text-right">
