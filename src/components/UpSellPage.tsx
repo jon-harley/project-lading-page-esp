@@ -4,7 +4,7 @@ import { Sparkles, Clock, FileText, Palette, Gift } from 'lucide-react';
 import CountdownTimer from '../components/CountdownTimer';
 
 const UpsellPage = () => {
-  const PAYMENT_URL = 'https://apphive.mycartpanda.com/checkout/171442443:1';
+  const PAYMENT_URL = 'https://pay.hotmart.com/E98068564N?checkoutMode=10';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 py-16 px-4">
