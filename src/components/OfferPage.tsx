@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: "¿Cuál es el precio de un dibujo?",
-    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando €19,90."
+    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando €7,90."
   },
   {
     question: "¿Por qué debería confiar en ti si soy escéptico(a)?",
@@ -70,6 +70,7 @@ const OfferPage = () => {
     const { formData } = useForm();
     const firstName = formData.fullName?.split(' ')[0] || 'Querida';
     const PAYMENT_URL = 'https://pay.hotmart.com/M98060773D?checkoutMode=10';
+    const PAYMENT_URL_OFERTA_LIMITADA = 'https://pay.hotmart.com/E98068564N?checkoutMode=10';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 py-16 px-4">
@@ -363,8 +364,8 @@ const OfferPage = () => {
             <div className="mb-6">
               <p className="text-2xl text-purple-200 mb-2">Paquete de Dibujo del Alma Gemela</p>
               <div className="flex items-center justify-center gap-4">
-                <span className="text-gray-400 line-through text-2xl">€59,90</span>
-                <span className="text-4xl font-bold text-white">€19,90</span>
+                <span className="text-gray-400 line-through text-2xl">€49,90</span>
+                <span className="text-4xl font-bold text-white">€7,90</span>
               </div>
             </div>
             <a
@@ -550,14 +551,14 @@ const OfferPage = () => {
         <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 text-center mb-12">
           <h2 className="text-2xl font-semibold text-white mb-4">💡 Oferta Limitada</h2>
           <p className="text-xl text-purple-200 mb-6">
-            Estos bonos suman €98, pero los recibes por solo €19,90 al elegir el Paquete Completo ahora.
+            Estos bonos suman €69,90, pero los recibes por solo €8,90 al elegir el Paquete Completo ahora.
           </p>
         </div>
             
       {/* Action Buttons */}
               <div className="space-y-4">
                 <a
-                  href={PAYMENT_URL}
+                  href={PAYMENT_URL_OFERTA_LIMITADA}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 px-8 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xl font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 text-center transform hover:scale-[1.02] shadow-lg"
