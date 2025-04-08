@@ -69,7 +69,7 @@ const OfferPage = () => {
       };
     const { formData } = useForm();
     const firstName = formData.fullName?.split(' ')[0] || 'Querida';
-    const PAYMENT_URL = 'https://pay.hotmart.com/M98060773D?checkoutMode=10';
+    const PAYMENT_URL = 'https://pay.hotmart.com/I99111829K?checkoutMode=10';
     const PAYMENT_URL_OFERTA_LIMITADA = 'https://pay.hotmart.com/E98068564N?checkoutMode=10';
 
   return (
