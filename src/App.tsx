@@ -8,13 +8,15 @@ import LoadingBar from './components/LoadingBar';
 import { FormProvider } from './components/FormContext';
 import UpSellPage from './components/UpSellPage';
 import ThankYouPage from './components/ThankYouPage';
+import VSLPage from './components/VSLPage';
 
 function App() {
   return (
   <FormProvider>
     <LoadingBar />
     <Routes>
-      <Route path="/" element={<Quiz />} />
+      <Route path="/" element={<VSLPage />} />
+      <Route path="/quiz" element={<Quiz />} />
      {/* <Route path="/homePage" element={<HomePage />} /> // using single page*/} 
       <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsConditions />} />

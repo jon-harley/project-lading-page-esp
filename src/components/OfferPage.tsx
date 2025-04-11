@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: "¿Cuál es el precio de un dibujo?",
-    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando €7,90."
+    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando € 9,90."
   },
   {
     question: "¿Por qué debería confiar en ti si soy escéptico(a)?",
@@ -365,7 +365,7 @@ const OfferPage = () => {
               <p className="text-2xl text-purple-200 mb-2">Paquete de Dibujo del Alma Gemela</p>
               <div className="flex items-center justify-center gap-4">
                 <span className="text-gray-400 line-through text-2xl">€49,90</span>
-                <span className="text-4xl font-bold text-white">€7,90</span>
+                <span className="text-4xl font-bold text-white">€ 9,90</span>
               </div>
             </div>
             <a
