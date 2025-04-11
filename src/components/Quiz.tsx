@@ -371,25 +371,21 @@ const Quiz: React.FC = () => {
         );
 
         case 'date':
-  return (
-    <div className="w-full max-w-md mx-auto">
-      <input
-        type="date"
-        value={birthDate}
-        onChange={(e) => {
-          const date = e.target.value;
-          setBirthDate(date);
-
-          // Verifica se a data está no formato completo YYYY-MM-DD
-          if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-            setTimeout(() => handleNext(), 300); // pequeno delay para UX suave
-          }
-        }}
-        className="w-full px-4 py-3 rounded-lg bg-white/10 border border-purple-700 text-white focus:outline-none focus:border-purple-500"
-      />
-    </div>
-  );
-
+          return (
+            <div className="w-full max-w-md mx-auto">
+              <input
+                type="date"
+                value={birthDate}
+                onChange={(e) => setBirthDate(e.target.value)}
+                onBlur={() => {
+                  if (birthDate) {
+                    setTimeout(() => handleNext(), 300); // leve delay para garantir o registro
+                  }
+                }}
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-purple-700 text-white focus:outline-none focus:border-purple-500"
+              />
+            </div>
+          );
         
 
       case 'zodiac':
@@ -579,7 +575,7 @@ const Quiz: React.FC = () => {
 
           {renderQuestion()}
 
-          {(question.type === 'text' || question.type === 'testimonials') && (
+          {(question.type === 'text' || question.type === 'testimonials' || question.type === 'date') && (
             <div className="flex justify-center mt-12">
               <button
                 onClick={handleNext}
