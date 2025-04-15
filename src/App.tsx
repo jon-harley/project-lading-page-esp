@@ -9,20 +9,22 @@ import { FormProvider } from './components/FormContext';
 import UpSellPage from './components/UpSellPage';
 import ThankYouPage from './components/ThankYouPage';
 import VSLPage from './components/VSLPage';
+import UpsellPageProvisions from './components/UpSellPageProvisions';
 
 function App() {
   return (
   <FormProvider>
     <LoadingBar />
     <Routes>
-      <Route path="/" element={<VSLPage />} />
-      <Route path="/quiz" element={<Quiz />} />
+      {/*<Route path="/" element={<VSLPage />} />*/}
+      <Route path="/" element={<Quiz />} />
      {/* <Route path="/homePage" element={<HomePage />} /> // using single page*/} 
       <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsConditions />} />
       <Route path="/offerPage" element={<OfferPage />} />
       <Route path="/upsell" element={<UpSellPage />} />
       <Route path="/thanks" element={<ThankYouPage />} />
+      <Route path="/upsellProvisions" element={<UpsellPageProvisions />} />
     </Routes>
   </FormProvider>
   );
