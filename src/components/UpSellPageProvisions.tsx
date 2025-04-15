@@ -4,7 +4,7 @@ import { Sparkles, Clock, FileText, Palette, Gift } from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
 
 const UpsellPageProvisions = () => {
-  const PAYMENT_URL = 'https://pay.cakto.com.br/bRGZJSU';
+  const PAYMENT_URL = 'https://pay.hotmart.com/X99218545M?checkoutMode=10';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 py-16 px-4">
@@ -86,7 +86,7 @@ const UpsellPageProvisions = () => {
         <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 text-center mb-12">
           <h2 className="text-2xl font-semibold text-white mb-4">💡 Limited-Time Offer</h2>
           <p className="text-xl text-purple-200 mb-6">
-          These bonuses are worth $44 – but you get everything for just $11.90 when you choose the Complete Package now.
+          These bonuses are worth $44 – but you get everything for just $12.90 when you choose the Complete Package now.
           </p>
         </div>
 
