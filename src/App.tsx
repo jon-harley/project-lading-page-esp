@@ -25,6 +25,7 @@ function App() {
       <Route path="/upsell" element={<UpSellPage />} />
       <Route path="/thanks" element={<ThankYouPage />} />
       <Route path="/upsellProvisions" element={<UpsellPageProvisions />} />
+      /*<Route path="/vslPage" element={<VSLPage />} />*/
     </Routes>
   </FormProvider>
   );
