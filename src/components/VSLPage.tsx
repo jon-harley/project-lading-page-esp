@@ -13,7 +13,7 @@ const VSLPage = () => {
   const [watchingNow, setWatchingNow] = useState(Math.floor(Math.random() * 50) + 350); // Inicializa com valor aleatório
   const navigate = useNavigate();
 
-  const nextPageRoute = 'https://pay.hotmart.com/L98650187U?checkoutMode=10';
+  const nextPageRoute = 'https://pay.hotmart.com/Y99744792P?checkoutMode=10';
   const targetTime = 1429; // 23 minutos e 49 segundos em segundos
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -143,7 +143,7 @@ const VSLPage = () => {
       </div>
 
       <div className="w-full text-xs text-gray-400 text-center mt-8">
-        <p>Copyright 2025 - Luz del Amor®</p>
+        <p>Copyright 2025 - SOURCE FOUNDRY®</p>
         <p>All rights reserved</p>
         <p className="mt-2">
           <a href="/terms" className="hover:underline">Terms and conditions</a> ·{' '}

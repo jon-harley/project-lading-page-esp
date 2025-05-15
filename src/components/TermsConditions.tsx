@@ -9,7 +9,7 @@ const TermsConditions = () => {
       <div className="max-w-[900px] mx-auto text-center mb-12">
         <ScrollText className="w-16 h-16 mx-auto mb-6 text-purple-300" />
         <h1 className="text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">
-        Términos y Condiciones
+          Terms and Conditions
         </h1>
       </div>
       
@@ -20,143 +20,137 @@ const TermsConditions = () => {
             {/* Introduction */}
             <div className="border-l-4 border-purple-500 pl-6 mb-8">
               <p className="text-gray-600">
-              ¡Bienvenido(a) a LUZ DEL AMOR!
+                Welcome to SOURCE FOUNDRY
               </p>
               <p className="text-gray-600 mt-4">
-              Estos términos y condiciones describen las reglas y regulaciones para el uso del sitio web de LUZ DEL AMOR, ubicado en https://luzdoamor.online/.
+                These terms and conditions outline the rules and regulations for the use of SOURCE FOUNDRY's Website, located at https://www.sourcefoundry.online/.
               </p>
               <p className="text-gray-600 mt-4">
-              Al acceder a este sitio web, asumimos que aceptas estos términos y condiciones. No continúes utilizando LUZ DEL AMOR si no estás de acuerdo con todos los términos y condiciones aquí establecidos.
+                By accessing this website, we assume you accept these terms and conditions. Do not continue to use SOURCE FOUNDRY if you do not agree to all of the terms and conditions stated on this page.
               </p>
             </div>
 
             <section className="mb-12">
-              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Terminología</h2>
+              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Terminology</h2>
               <p className="text-gray-600">
-              La siguiente terminología se aplica a estos Términos y Condiciones, Declaración de Privacidad y Aviso de Exención de Responsabilidad, así como a todos los Acuerdos: "Cliente", "Tú" y "Tu" se refieren a ti, la persona que accede a este sitio y está de acuerdo con los términos y condiciones de la Empresa. "La Empresa", "Nosotros", "Nuestro(a)" y "Nos" se refieren a nuestra Empresa. "Parte", "Partes" o "Nosotros" se refieren tanto al Cliente como a nosotros. Todos los términos se refieren a la oferta, aceptación y consideración del pago necesario para realizar nuestra atención al Cliente de la forma más adecuada, con el propósito expreso de satisfacer las necesidades del Cliente en relación con la prestación de los servicios declarados por la Empresa, de acuerdo con y sujeto a las leyes vigentes en los Países Bajos. Cualquier uso de la terminología anterior u otras palabras en singular, plural, con mayúsculas y/o él/ella o ellos/ellas se considera intercambiable y, por lo tanto, se refiere a lo mismo.
+                The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
               </p>
             </section>
 
             <section className="mb-12 bg-purple-50 p-6 rounded-lg">
               <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Cookies</h2>
               <p className="text-gray-600">
-              Utilizamos cookies. Al acceder a LUZ DEL AMOR, aceptas el uso de cookies de acuerdo con la Política de Privacidad de LUZ DEL AMOR.
+                We employ the use of cookies. By accessing SOURCE FOUNDRY, you agreed to use cookies in agreement with the SOURCE FOUNDRY's Privacy Policy.
               </p>
               <p className="text-gray-600 mt-4">
-              La mayoría de los sitios web interactivos utilizan cookies para recuperar detalles del usuario en cada visita. Las cookies son utilizadas por nuestro sitio para permitir funcionalidades específicas y facilitar la navegación. Algunos de nuestros socios afiliados/anunciantes también pueden utilizar cookies.
+                Most interactive websites use cookies to let them retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
               </p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Licencia</h2>
+              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">License</h2>
               <p className="text-gray-600">
-              Salvo disposición en contrario, LUZ DEL AMOR y/o sus licenciantes poseen los derechos de propiedad intelectual de todo el material contenido en LUZ DEL AMOR. Todos los derechos de propiedad intelectual están reservados. Puedes acceder a este contenido para uso personal, sujeto a las restricciones establecidas en estos términos y condiciones.
+                Unless otherwise stated, SOURCE FOUNDRY and/or its licensors own the intellectual property rights for all material on SOURCE FOUNDRY. All intellectual property rights are reserved. You may access this from SOURCE FOUNDRY for your own personal use subjected to restrictions set in these terms and conditions.
               </p>
-              <p className="text-gray-600 mt-4">No debes:</p>
+              <p className="text-gray-600 mt-4">You must not:</p>
               <ul className="list-disc pl-6 mt-2 space-y-2 text-gray-600">
-                <li>Republicar material de LUZ DEL AMOR;</li>
-                <li>Vender, alquilar o sublicenciar material de LUZ DEL AMOR;</li>
-                <li>Reproducir, duplicar o copiar material de LUZ DEL AMOR;</li>
-                <li>Redistribuir contenido de LUZ DEL AMOR.</li>
+                <li>Republish material from SOURCE FOUNDRY</li>
+                <li>Sell, rent or sub-license material from SOURCE FOUNDRY</li>
+                <li>Reproduce, duplicate or copy material from SOURCE FOUNDRY</li>
+                <li>Redistribute content from SOURCE FOUNDRY</li>
               </ul>
-              <p className="text-gray-600 mt-4">Este Acuerdo entra en vigencia en la fecha actual.</p>
+              <p className="text-gray-600 mt-4">This Agreement shall begin on the date hereof.</p>
             </section>
 
             <section className="mb-12 bg-purple-50 p-6 rounded-lg">
-              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Hyperlinks a Nuestro Contenido</h2>
+              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Hyperlinking to our Content</h2>
               <p className="text-gray-600">
-              Las siguientes organizaciones pueden crear enlaces a nuestro sitio sin aprobación previa por escrito:
+                The following organizations may link to our Website without prior written approval:
               </p>
               <ul className="list-disc pl-6 mt-2 space-y-2 text-gray-600">
-                <li>Agencias gubernamentales;</li>
-                <li>Motores de búsqueda;</li>
-                <li>Organizaciones de noticias;</li>
-                <li>Distribuidores de directorios en línea pueden vincularse a nuestro sitio de la misma manera que lo hacen con otros negocios listados; y</li>
-                <li>Empresas Acreditadas en todo el sistema, excepto organizaciones sin fines de lucro solicitantes, centros comerciales de caridad y grupos de recaudación de fondos para caridad, que no pueden crear enlaces a nuestro sitio.</li>
+                <li>Government agencies;</li>
+                <li>Search engines;</li>
+                <li>News organizations;</li>
+                <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
+                <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
               </ul>
               <p className="text-gray-600 mt-4">
-              Estas organizaciones pueden crear enlaces a nuestra página de inicio, publicaciones u otra información del sitio, siempre que el enlace: (a) no sea engañoso de ninguna manera; (b) no implique falsamente patrocinio, respaldo o aprobación de la parte vinculante y sus productos/servicios; y (c) esté dentro del contexto del sitio de la parte vinculante.
+                These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.
               </p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Responsabilidad del Contenido</h2>
+              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Content Liability</h2>
               <p className="text-gray-600">
-              No seremos responsables por ningún contenido que aparezca en tu sitio. Aceptas protegernos y defendernos contra todas las reclamaciones que puedan surgir en tu sitio. Ningún enlace debe aparecer en ningún sitio que pueda interpretarse como difamatorio, obsceno, criminal o que infrinja, viole o defienda la violación de derechos de terceros.
+                We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.
               </p>
             </section>
 
             <section className="mb-12 bg-purple-50 p-6 rounded-lg">
-              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Reserva de Derechos</h2>
+              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Reservation of Rights</h2>
               <p className="text-gray-600">
-              Nos reservamos el derecho de solicitar la eliminación de cualquier enlace o de todos los enlaces a nuestro sitio. Aceptas eliminar inmediatamente todos los enlaces a nuestro sitio a petición. También nos reservamos el derecho de modificar estos términos y condiciones y nuestra política de enlaces en cualquier momento. Al continuar enlazando a nuestro sitio, aceptas estar vinculado y seguir estos términos y condiciones de vinculación.
+                We reserve the right to request that you remove all links or any particular link to our Website. You approve to remove immediately all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Exención de Responsabilidad</h2>
+              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">Disclaimer</h2>
               <p className="text-gray-600">
-              En la medida máxima permitida por la legislación aplicable, excluimos todas las representaciones, garantías y condiciones relacionadas con nuestro sitio y el uso de este sitio. Nada en esta exención de responsabilidad:
+                To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2 text-gray-600">
-                <li>Limitará o excluirá nuestra o tu responsabilidad por muerte o daño personal;</li>
-                <li>Limitará o excluirá nuestra o tu responsabilidad por fraude o declaración fraudulenta;</li>
-                <li>Limitará cualquiera de nuestras o tus responsabilidades de una manera no permitida por la legislación aplicable; o</li>
-                <li>Excluirá cualquiera de nuestras o tus responsabilidades que no puedan ser excluidas de acuerdo con la legislación aplicable.</li>
+                <li>limit or exclude our or your liability for death or personal injury;</li>
+                <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
+                <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+                <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
               </ul>
               <p className="text-gray-600 mt-4">
-              Dado que el sitio y la información y servicios en el sitio se proporcionan de forma gratuita, no seremos responsables de ninguna pérdida o daño de cualquier naturaleza.
+                As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.
               </p>
             </section>
           </div>
         </div>
       </div>
 
-    {/* Footer */}
-              <footer className="mt-16 py-8 px-4 border-t border-purple-800">
-                <div className="max-w-4xl mx-auto">
-                  {/* Disclaimer */}
-                  <div className="text-sm text-purple-300/80 mb-8 space-y-4">
-                    <h3 className="font-semibold mb-2">Isenção de Responsabilidade</h3>
-                    <p>
-                Los nombres de empresas, productos y servicios mencionados en este sitio web se utilizan solo con fines de identificación y no implican ningún tipo de respaldo. Todas las marcas registradas pertenecen exclusivamente a sus respectivos propietarios.
-                </p>
-                <p>
-                Aviso Legal: Al adquirir nuestros servicios, reconoces que se trata de un producto destinado al entretenimiento y no a un servicio profesional de asesoramiento psicológico, legal o de salud. No soy psicólogo, abogado ni profesional de la salud, y las lecturas ofrecidas no sustituyen orientación profesional en estas áreas.
-                </p>
-                <p>
-                Los retratos e interpretaciones proporcionados se basan en percepciones intuitivas y no garantizamos que la persona dibujada corresponda a alguien que encuentres en la vida real. Las experiencias varían de persona a persona y no hay promesas de resultados específicos.
-                </p>
-                <p>
-                Además, los testimonios, estudios de caso y ejemplos presentados en esta página reflejan experiencias individuales y no garantizan que todos tengan los mismos o similares resultados. Todas las ventas son finales, pero garantizamos la entrega del servicio según lo descrito.
-                </p>
-                <p>
-                Si tienes dudas, recomendamos que tomes tu decisión con discernimiento y, si es necesario, busques asesoramiento profesional.
-                </p>
-                  </div>
-        
-                  {/* Copyright and Links */}
-                  <div className="text-center space-y-4">
-                    <p className="text-purple-300">
-                      © 2024 Luz Del Amor. Todos los derechos reservados.
-                    </p>
-                    <div className="flex justify-center space-x-6 text-sm">
-                      <Link to="/privacyPolicy" className="text-purple-300 hover:text-purple-200 transition-colors">
-                      Política de Privacidad
-                      </Link>
-                      <Link to="/terms" className="text-purple-300 hover:text-purple-200 transition-colors">
-                      Términos y Condiciones
-                      </Link>
-                      <a 
-                        href="mailto:isador4.lys@gmail.com" 
-                        className="text-purple-300 hover:text-purple-200 transition-colors"
-                      >
-                        Ponte en Contacto
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </footer>  
+      {/* Footer */}
+      <footer className="mt-16 py-8 px-4 border-t border-purple-800">
+        <div className="max-w-4xl mx-auto">
+          {/* Disclaimer */}
+          <div className="text-sm text-purple-300/80 mb-8 space-y-4">
+            <h3 className="font-semibold mb-2">Disclaimer</h3>
+            <p>
+              The names of companies, products and services mentioned on this website are used for identification purposes only and do not imply any kind of endorsement. All trademarks belong exclusively to their respective owners.
+            </p>
+            <p>
+              Legal Notice: By acquiring our services, you acknowledge that this product is intended for entertainment purposes and not a professional psychological, legal or health advisory service. I am not a psychologist, lawyer or health professional, and the readings offered do not substitute professional guidance in these areas.
+            </p>
+            <p>
+              The portraits and interpretations provided are based on intuitive perceptions and we do not guarantee that the person drawn corresponds to someone you will meet in real life. Experiences vary from person to person and there are no guarantees of specific results.
+            </p>
+            <p>
+              Furthermore, the testimonials, case studies and examples presented on this page reflect individual experiences and do not guarantee that everyone will have the same or similar results. All sales are final, but we guarantee the delivery of the service as described.
+            </p>
+            <p>
+              If you have any doubts, we recommend that you make your decision with discernment and, if necessary, seek professional advice.
+            </p>
+          </div>
+  
+          {/* Copyright and Links */}
+          <div className="text-center space-y-4">
+            <p className="text-purple-300">
+              © 2025 SOURCE FOUNDRY. All rights reserved.
+            </p>
+            <div className="flex justify-center space-x-6 text-sm">
+              <Link to="/privacyPolicy" className="text-purple-300 hover:text-purple-200 transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-purple-300 hover:text-purple-200 transition-colors">
+                Terms and Conditions
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
