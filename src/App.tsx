@@ -17,15 +17,17 @@ function App() {
     <LoadingBar />
     <Routes>
       {/*<Route path="/" element={<VSLPage />} />*/}
-      <Route path="/" element={<Quiz />} />
-     {/* <Route path="/homePage" element={<HomePage />} /> // using single page*/} 
+      <Route path="/" element={<VSLPage />} />
       <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsConditions />} />
+     {/* <Route path="/homePage" element={<HomePage />} /> // using single page*/} 
+      {/*<Route path="/privacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsConditions />} />
       <Route path="/offerPage" element={<OfferPage />} />
       <Route path="/upsell" element={<UpSellPage />} />
       <Route path="/thanks" element={<ThankYouPage />} />
       <Route path="/upsellProvisions" element={<UpsellPageProvisions />} />
-      /*<Route path="/vslPage" element={<VSLPage />} />*/
+      {/*<Route path="/vslPage" element={<VSLPage />} />*/}
     </Routes>
   </FormProvider>
   );

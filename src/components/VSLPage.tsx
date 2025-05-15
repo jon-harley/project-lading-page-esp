@@ -10,11 +10,11 @@ const VSLPage = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [hasEnteredFullscreen, setHasEnteredFullscreen] = useState(false);
   const [showNextButton, setShowNextButton] = useState(false);
-  const [watchingNow, setWatchingNow] = useState(0);
+  const [watchingNow, setWatchingNow] = useState(Math.floor(Math.random() * 50) + 350); // Inicializa com valor aleatório
   const navigate = useNavigate();
 
-  const nextPageRoute = 'https://app.smarttalknow-chat.shop/isadora-predictions';
-  const targetTime = 4 * 60 + 55; // 4 minutos e 55 segundos em segundos
+  const nextPageRoute = 'https://pay.hotmart.com/L98650187U?checkoutMode=10';
+  const targetTime = 1429; // 23 minutos e 49 segundos em segundos
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   useEffect(() => {
@@ -34,9 +34,6 @@ const VSLPage = () => {
           setIsPlaying(true);
         }
       });
-
-      // Gera um número aleatório de espectadores em torno de 400
-      setWatchingNow(Math.floor(Math.random() * 50) + 350); // Entre 350 e 399 (exemplo)
     }
 
     const handleFullscreenChange = () => {
@@ -50,8 +47,15 @@ const VSLPage = () => {
     };
 
     document.addEventListener('fullscreenchange', handleFullscreenChange);
+
+    // Intervalo para atualizar o contador de espectadores
+    const intervalId = setInterval(() => {
+      setWatchingNow(prevCount => prevCount + Math.floor(Math.random() * 5) + 1); // Incrementa por 1-5 a cada vez
+    }, 10000); // Atualiza a cada 10 segundos (ajuste conforme necessário)
+
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      clearInterval(intervalId); // Limpa o intervalo quando o componente é desmontado
     };
   }, [player, navigate]);
 
@@ -110,7 +114,7 @@ const VSLPage = () => {
             <iframe
               ref={iframeRef}
               title="vimeo-player"
-              src="https://player.vimeo.com/video/1084115175?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=0&amp;sidedock=0"
+              src="https://player.vimeo.com/video/1084480778?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=0&amp;sidedock=0" // URL DA NOVA VSL
               className="absolute inset-0 w-full h-full"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
@@ -132,7 +136,7 @@ const VSLPage = () => {
               onClick={handleNextButtonClick}
               className="px-8 py-4 bg-green-500 text-white rounded-full hover:bg-green-600 transition"
             >
-              Reveal My Destiny Now
+              YES, I WANT TO DRIVE HIM CRAZY!
             </button>
           </div>
         )}
