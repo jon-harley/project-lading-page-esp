@@ -10,7 +10,7 @@ const VSLPage = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [hasEnteredFullscreen, setHasEnteredFullscreen] = useState(false);
   const [showNextButton, setShowNextButton] = useState(false);
-  const [watchingNow, setWatchingNow] = useState(Math.floor(Math.random() * 50) + 350); // Inicializa com valor aleatório
+  const [watchingNow, setWatchingNow] = useState(632); // Começa com 632
   const navigate = useNavigate();
 
   const nextPageRoute = 'https://pay.hotmart.com/Y99744792P?checkoutMode=10';
@@ -48,10 +48,10 @@ const VSLPage = () => {
 
     document.addEventListener('fullscreenchange', handleFullscreenChange);
 
-    // Intervalo para atualizar o contador de espectadores
+    // Intervalo para atualizar o contador de espectadores a cada 2 segundos
     const intervalId = setInterval(() => {
-      setWatchingNow(prevCount => prevCount + Math.floor(Math.random() * 5) + 1); // Incrementa por 1-5 a cada vez
-    }, 10000); // Atualiza a cada 10 segundos (ajuste conforme necessário)
+      setWatchingNow(prevCount => prevCount + Math.floor(Math.random() * 3) + 1); // Incrementa por 1-3 a cada vez
+    }, 2000); // Atualiza a cada 2 segundos
 
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
@@ -128,7 +128,7 @@ const VSLPage = () => {
           </div>
         </div>
 
-        <p className="mt-4 text-lg text-white text-center">{watchingNow} people watching now...</p>
+        <p className="mt-4 text-lg text-white text-center"><span className="text-red-500">{watchingNow}</span> people watching now...</p>
 
         {!isFullscreen && showNextButton && (
           <div className="mt-6 flex justify-center z-10">
