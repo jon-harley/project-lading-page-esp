@@ -10,6 +10,7 @@ import UpSellPage from './components/UpSellPage';
 import ThankYouPage from './components/ThankYouPage';
 import VSLPage from './components/VSLPage';
 import UpsellPageProvisions from './components/UpSellPageProvisions';
+import VSLNew from './components/VSLNew';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
     <LoadingBar />
     <Routes>
       {/*<Route path="/" element={<VSLPage />} />*/}
-      <Route path="/" element={<VSLPage />} />
+      {/*<Route path="/" element={<VSLPage (antiga com vimeo) />} />*/}
+      <Route path="/" element={<VSLNew />} />
       <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsConditions />} />
      {/* <Route path="/homePage" element={<HomePage />} /> // using single page*/} 
