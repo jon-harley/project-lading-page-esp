@@ -12,7 +12,7 @@ import React, { useEffect, useRef, useState } from 'react';
  
 
   const [currentDate, setCurrentDate] = useState('');
-  const [watchingNow, setWatchingNow] = useState(632); // Começa com 632
+  const [watchingNow, setWatchingNow] = useState(352); // Começa com 352
  
 
   useEffect(() => {
@@ -74,7 +74,7 @@ import React, { useEffect, useRef, useState } from 'react';
   <div className="min-h-screen bg-black flex flex-col items-center px-4 py-8">
   {/* Mensagem no topo */}
   <div style={{ backgroundColor: 'red', color: 'white', textAlign: 'center', padding: '10px', width: 'fit-content', margin: '10px auto', borderRadius: '5px' }}>
-  While you’re wasting time doubting, he’s already forgotten you exist. This is your last chance to be the priority in his life — miss it, and you’ll become just another memory he wants to erase.
+  You can keep hoping… or discover what actually works. This presentation will be taken down on {currentDate}
   </div>
  
 
