@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: "¿Cuál es el precio de un dibujo?",
-    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando € 9,90."
+    answer: "Debido a la calidad de mi trabajo, normalmente cobro €59,90. Sin embargo, debido al gran interés en mis servicios, actualmente estoy cobrando € 8,90."
   },
   {
     question: "¿Por qué debería confiar en ti si soy escéptico(a)?",
@@ -69,7 +69,7 @@ const OfferPage = () => {
       };
     const { formData } = useForm();
     const firstName = formData.fullName?.split(' ')[0] || 'Querida';
-    const PAYMENT_URL = 'https://pay.hotmart.com/I99111829K?checkoutMode=10';
+    const PAYMENT_URL = 'https://pay.hotmart.com/U100480116L?off=1v372zi7&checkoutMode=10';
     const PAYMENT_URL_OFERTA_LIMITADA = 'https://pay.hotmart.com/E98068564N?checkoutMode=10';
 
   return (
@@ -178,7 +178,7 @@ const OfferPage = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-[1.02]"
           >
-            <span>{firstName}, su alma gemela está lista para conocerla</span>
+            <span>su alma gemela está lista para conocerla</span>
             <ArrowRight className="w-6 h-6" />
           </a>
         </div> 
@@ -244,7 +244,7 @@ const OfferPage = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-[1.02]"
           >
-            <span>{firstName}, su alma gemela está lista para conocerla</span>
+            <span>su alma gemela está lista para conocerla</span>
             <ArrowRight className="w-6 h-6" />
           </a>
         </div>
@@ -365,7 +365,7 @@ const OfferPage = () => {
               <p className="text-2xl text-purple-200 mb-2">Paquete de Dibujo del Alma Gemela</p>
               <div className="flex items-center justify-center gap-4">
                 <span className="text-gray-400 line-through text-2xl">€49,90</span>
-                <span className="text-4xl font-bold text-white">€ 9,90</span>
+                <span className="text-4xl font-bold text-white">€ 8,90</span>
               </div>
             </div>
             <a
@@ -379,7 +379,7 @@ const OfferPage = () => {
             </a>
             <div className="flex items-center justify-center gap-2 text-purple-300">
               <Shield className="w-5 h-5" />
-              <span>Garantía de satisfacción de 7 días o tu dinero de vuelta</span>
+              <span>Garantía de satisfacción de 30 días o tu dinero de vuelta</span>
             </div>
           </div>
         </section>
@@ -551,7 +551,7 @@ const OfferPage = () => {
         <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 text-center mb-12">
           <h2 className="text-2xl font-semibold text-white mb-4">💡 Oferta Limitada</h2>
           <p className="text-xl text-purple-200 mb-6">
-            Estos bonos suman €69,90, pero los recibes por solo €8,90 al elegir el Paquete Completo ahora.
+            Estos bonos suman €69,90, pero los recibes por solo €14,90 al elegir el Paquete Completo ahora.
           </p>
         </div>
             
@@ -613,7 +613,7 @@ const OfferPage = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-[1.02]"
           >
-            <span>{firstName}, su alma gemela está lista para conocerla.</span>
+            <span>su alma gemela está lista para conocerla.</span>
             <ArrowRight className="w-6 h-6" />
           </a>
     </div>
@@ -644,7 +644,7 @@ const OfferPage = () => {
               {/* Copyright and Links */}
               <div className="text-center space-y-4">
                 <p className="text-purple-300">
-                  © 2024 Luz Del Amor. Todos los derechos reservados.
+                  © 2025 Luz Del Amor. Todos los derechos reservados.
                 </p>
                 <div className="flex justify-center space-x-6 text-sm">
                   <Link to="/privacyPolicy" className="text-purple-300 hover:text-purple-200 transition-colors">

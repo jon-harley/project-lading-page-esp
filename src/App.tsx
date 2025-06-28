@@ -19,13 +19,13 @@ function App() {
     <Routes>
       {/*<Route path="/" element={<VSLPage />} />*/}
       {/*<Route path="/" element={<VSLPage (antiga com vimeo) />} />*/}
-      <Route path="/" element={<VSLNew />} />
+      {/*<Route path="/" element={<VSLNew />} />/>*/}
       <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsConditions />} />
-     {/* <Route path="/homePage" element={<HomePage />} /> // using single page*/} 
-      {/*<Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+      {/*<Route path="/" element={<HomePage />} /> /using single page*/}
+      {/*<Route path="/privacyPolicy" element={<PrivacyPolicy />} />*/}
       <Route path="/terms" element={<TermsConditions />} />
-      <Route path="/offerPage" element={<OfferPage />} />
+      <Route path="/" element={<OfferPage />} />
       <Route path="/upsell" element={<UpSellPage />} />
       <Route path="/thanks" element={<ThankYouPage />} />
       <Route path="/upsellProvisions" element={<UpsellPageProvisions />} />
